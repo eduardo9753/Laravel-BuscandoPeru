@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image; //AJUTE DE LAS FOTOS
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
+
 
 class PersonController extends Controller
 {
@@ -114,6 +116,72 @@ class PersonController extends Controller
                         'msg' => 'El archivo no se pudo subir, verifique la extensión'
                     ]);
                 }
+            }
+        }
+    }
+
+    //actualizar persona
+    public function update(Request $request)
+    {
+        $id_person = $request->persona_id;
+        $person = Person::find($id_person);
+
+        $validator = validator::make($request->all(), [
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'edad' => 'required',
+            'fecha_suceso' => 'required',
+            'lugar_suceso' => 'required',
+            'adicional' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'code' => 0,
+                'error' => $validator->errors()->toArray()
+            ]);
+        } else {
+            if ($request->has('imagen')) {
+                $imagen = $request->file('imagen');
+                $nombreImagen = Str::uuid() . "." . $imagen->extension();
+
+                $imagenServidor = Image::make($imagen);
+                $imagenServidor->fit(1000, 1000);
+
+                $imagenPath = public_path('personas') . "/" . $nombreImagen;
+                $upload = $imagenServidor->save($imagenPath);
+
+                if ($upload) {
+                    //eliminamos la imagen antigua si es que existe
+                    if ($person->imagen) {
+                        $path_delete = public_path('personas/' . $person->imagen);
+                        if (File::exists($path_delete)) {
+                            unlink($path_delete);
+                        }
+                    }
+                }
+            } else {
+                $nombreImagen = $person->imagen;
+            }
+
+            //actualizamos los datos
+            $save = $person->update([
+                'nombres' => $request->nombres,
+                'apellidos' => $request->apellidos,
+                'edad' => $request->edad,
+                'fecha_suceso' => $request->fecha_suceso,
+                'lugar_suceso' => $request->lugar_suceso,
+                'imagen' => $nombreImagen,
+                'adicional' => $request->adicional,
+                'country_id' => 1,
+                'state_id' => 1,
+                'user_id' => Auth::user()->id
+            ]);
+
+            if ($save) {
+                return response()->json(['code' => 1, 'msg' => 'Actualizado correctamente']);
+            } else {
+                return response()->json(['code' => 0, 'msg' => 'Error']);
             }
         }
     }

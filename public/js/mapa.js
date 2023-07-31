@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
-    var latitudLima = '-12.0057733';
-    var longitudLima = '-75.2174581';
-    var zoom = 10;
+    var latitudLima = '-12.0257733';
+    var longitudLima = '-77.3174581';
+    var zoom = 8;
     var mapaUno = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var mapaDos = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
     var mapa = L.map("mapa").setView([latitudLima, longitudLima], zoom);
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    //funcion para recargar el mapa cada segundo
+    /*funcion para recargar el mapa cada segundo*/
     var person_id = $('#person_id').val();
     if (person_id >= 1) { setInterval(fetchCoordenadas, 1000); }
 
@@ -75,10 +75,20 @@ window.addEventListener('DOMContentLoaded', () => {
     function fetchCoordenadas() {
         var person_id = $('#person_id').val();
         $.get('/coordenadas/fecth', { person_id: person_id }, function (data) {
-            //console.log(data);
+            //console.log('datos:', data);
             if (data.code == 1) {
                 $.each(data.result, function (prefix, val) {
-                    return mapa.addLayer(L.marker([val.latitud, val.longitud]).bindPopup('' + val.person_id + ''));
+                    var greenIcon = L.icon({
+                        iconUrl: 'http://127.0.0.1:8000/personas/' + val.imagen, //iamgen usuario
+                        shadowUrl: 'https://cdn-icons-png.flaticon.com/512/2642/2642502.png', //sombra 
+
+                        iconSize: [45, 45], // tamaño de la imagen [ancho , alto]
+                        shadowSize: [35, 50], // tamaño del icono [ancho , alto]
+                        iconAnchor: [10, 115], // posicion de la imagen con respecto al punto [laterales(mayoy[izquierda],menor[derecha]),altura]
+                        shadowAnchor: [14, 72],  // the same for the shadow
+                        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+                    });
+                    return mapa.addLayer(L.marker([val.latitud, val.longitud], { icon: greenIcon }).bindPopup('' + val.nombres + '-' + val.created_at + ''));
                 });
             }
         }, 'json');

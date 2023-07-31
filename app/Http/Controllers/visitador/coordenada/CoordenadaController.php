@@ -26,7 +26,9 @@ class CoordenadaController extends Controller
             $save = Coordinate::insert([
                 'latitud' => $request->latitud,
                 'longitud' => $request->longitud,
-                'person_id' => $request->person_id
+                'person_id' => $request->person_id,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ]);
 
             if ($save) {
@@ -41,7 +43,13 @@ class CoordenadaController extends Controller
     public function fetchCoordenadas(Request $request)
     {
         $coordiante = Coordinate::join('people', 'people.id', '=', 'coordinates.person_id')
-            ->select('*')
+            ->select(
+                'coordinates.latitud',
+                'coordinates.longitud',
+                'coordinates.created_at',
+                'people.nombres',
+                'people.imagen'
+            )
             ->where('coordinates.person_id', '=', $request->person_id)->get();
 
         return response()->json([

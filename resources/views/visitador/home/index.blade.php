@@ -73,6 +73,7 @@
                             </div>
                             <div>
                                 <a href="{{ route('visitador.show', ['id' => $person->id]) }}">Saber más</a>
+                                <p>{{date('y-m-d h:i:s')}}</p>
                             </div>
                         </div>
                     </div>

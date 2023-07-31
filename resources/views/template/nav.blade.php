@@ -38,7 +38,7 @@
                 </label>
 
                 <div class="caja-img">
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('home.visitador.index') }}">
                         <img src="{{ asset('img/logo/logo.png') }}" alt="">
                     </a>
                 </div>

@@ -5,6 +5,8 @@
    flex-direction: column;
  }
 
+ #home-visitador .form-buscador {padding-top: 60px;}
+
  #home-visitador .home-visitador-flex .home-visitador-imagen img {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
