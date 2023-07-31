@@ -1,0 +1,4 @@
+#persona {padding-top: 50px;} 
+#persona .fondo-header{
+   background-color: var(--general);
+}

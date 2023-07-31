@@ -1,0 +1,21 @@
+
+/*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 460PX DE ANCHO*/
+@media (min-width: 0px) and (max-width: 800px){ 
+ #home-visitador .home-visitador-flex {
+   flex-direction: column;
+ }
+
+ #home-visitador .home-visitador-flex .home-visitador-imagen img {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    height: 300px;
+ }
+
+ #home-visitador .home-visitador-descripcion {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+ }
+
+ #home-visitador .home-visitador-descripcion .caracteristica button { margin-top: 6px; }
+}

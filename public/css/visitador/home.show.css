@@ -1,0 +1,25 @@
+#home-visitador-ver .persona ,
+#home-visitador-ver .caracteristica ,
+#home-visitador-ver .particularidad {
+  padding: 15px;
+  box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+  -webkit-box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+  -moz-box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+}
+
+#home-visitador-ver .caja-imagen {text-align: center; padding-top: 40px; padding-bottom: 20px;}
+#home-visitador-ver .caja-imagen img {
+    border-radius: 25px;
+    width: 330px;
+    height: 330px;
+}
+
+#home-visitador-ver .caracteristica button {
+    border: none;
+    background-color: var(--general);
+    padding: 2px 10px ;
+    color: var(--blanco);
+    border-radius: 15px;
+}
+
+#home-visitador-ver .titulo-mapa { text-align: center;padding-top: 15px; padding-bottom: 10px; text-transform: uppercase;}

@@ -1,0 +1,54 @@
+#home-visitador .home-visitador-flex{
+   display: flex; margin-bottom: 25px;
+}
+
+#home-visitador .form-buscador {padding-top: 100px; padding-bottom: 30px;}
+
+#home-visitador .home-visitador-flex .home-visitador-imagen img {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 330px;
+    height: 330px;
+}
+
+#home-visitador .home-visitador-descripcion{ 
+    width: 100%;
+    box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+    -webkit-box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+    -moz-box-shadow: 16px 2px 59px 1px rgba(189,189,189,1);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#home-visitador .home-visitador-descripcion .persona .flex-persona {display: flex; justify-content: space-between;}
+#home-visitador .home-visitador-descripcion .persona,
+#home-visitador .home-visitador-descripcion .caracteristica {
+    padding: 10px;
+    border-bottom: 1px solid rgba(189,189,189,1);
+}
+#home-visitador .home-visitador-descripcion .particularidad ,
+#home-visitador .home-visitador-descripcion .botones { padding: 15px;}
+#home-visitador .home-visitador-descripcion .botones{
+    display: flex;
+    justify-content: space-between;
+}
+#home-visitador .home-visitador-descripcion .caracteristica button {
+    border: none;
+    background-color: var(--general);
+    padding: 2px 10px ;
+    color: var(--blanco);
+    border-radius: 15px;
+}
+
+#home-visitador .home-visitador-descripcion .botones .whatsapp{
+    background-color: var(--verde);
+    padding: 10px;
+    color: var(--blanco);
+    border-radius: 25%;
+}
+
+#home-visitador .home-visitador-descripcion .botones .mapa{
+    background-color: var(--general);
+    padding: 10px;
+    color: var(--blanco);
+    border-radius: 25%;
+}
