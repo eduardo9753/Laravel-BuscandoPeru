@@ -33,7 +33,7 @@ Route::post('/register/singIn', [RegisterController::class, 'store'])->name('reg
 Route::get('/home/usuario',[HomeController::class, 'index'])->name('home.usuario.index');
 
 Route::get('/usuario/publicar', [PersonController::class, 'index'])->name('usuario.index');
-Route::post('/usuario/upload', [PersonController::class, 'save'])->name('usuario.save');
+Route::post('/usuario/guardar', [PersonController::class, 'save'])->name('usuario.save');
 Route::get('/usuario/post', [PostController::class, 'index'])->name('usuario.post.index');
 Route::get('/usuario/show/{id}',[PostController::class, 'show'])->name('usuario.post.show');
 
