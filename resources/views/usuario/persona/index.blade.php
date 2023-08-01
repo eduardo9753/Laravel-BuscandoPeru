@@ -15,7 +15,7 @@
     <section class="" id="persona">
         <div class="contenedor">
             <form action="{{ route('usuario.save') }}" id="form-persona" method="POST"
-                enctype="multipart/form-data">
+                enctype=application/x-www-form-urlencoded">
 
                 {{-- token de seguridad --}}
                 @csrf
