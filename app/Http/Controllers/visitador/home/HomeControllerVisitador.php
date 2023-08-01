@@ -36,7 +36,8 @@ class HomeControllerVisitador extends Controller
                 'particularities.ultima_vista',
                 'particularities.observaciones',
                 'particularities.id as particularity_id',
-                'countries.nombre as pais'
+                'countries.nombre as pais',
+                'countries.codigo'
             )->orderBy('people.id', 'desc')->simplePaginate(9);
 
             //dd($people);

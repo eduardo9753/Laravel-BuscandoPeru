@@ -67,7 +67,7 @@
 
                         <div class="botones">
                             <div>
-                                <a href="https://wa.me/51952955205?text=Quisiera" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
+                                <a href="https://wa.me/{{ $person->codigo }}{{ $person->celular }}?text=Quisiera" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
                                 <a href="{{ route('visitador.show', ['id' => $person->id]) }}" class="mapa"><i
                                         class='bx bx-map bx-burst'></i></a>
                             </div>
