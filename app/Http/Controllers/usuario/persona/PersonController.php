@@ -181,10 +181,10 @@ class PersonController extends Controller
                 'fecha_suceso' => $request->fecha_suceso,
                 'lugar_suceso' => $request->lugar_suceso,
                 'imagen' => $nombreImagen,
+                'celular' => $request->celular,
                 'adicional' => $request->adicional,
                 'country_id' => 1,
-                'celular' => $request->celular,
-                'state_id' => 1,
+                'state_id' => 3,
                 'user_id' => Auth::user()->id
             ]);
 
