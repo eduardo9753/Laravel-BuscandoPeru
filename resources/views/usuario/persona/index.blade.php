@@ -28,16 +28,14 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="nombres" id="nombres"
-                                        placeholder="nombres">
+                                    <input type="text" class="form-control" name="nombres" id="nombres">
                                     <label for="nombres">Nombres</label>
                                     {{-- alerta de error --}}
                                     <span class="text-danger error-text nombres_error"></span>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="apellidos" id="apellidos"
-                                        placeholder="apellidos">
+                                    <input type="text" class="form-control" name="apellidos" id="apellidos">
                                     <label for="apellidos">Apellidos</label>
                                     {{-- alerta de error --}}
                                     <span class="text-danger error-text apellidos_error"></span>
@@ -48,7 +46,7 @@
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="number" class="form-control" id="celular"
-                                                name="celular" placeholder="celular">
+                                                name="celular">
                                             <label for="celular">Celular de Contacto</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text celular_error"></span>
@@ -57,8 +55,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="edad" name="edad"
-                                                placeholder="edad">
+                                            <input type="text" class="form-control" id="edad" name="edad">
                                             <label for="edad">Edad</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text edad_error"></span>
@@ -79,7 +76,7 @@
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="date" class="form-control" id="fecha_suceso" name="fecha_suceso"
-                                                value="{{ date('Y-m-d') }}" placeholder="fecha_suceso">
+                                                value="{{ date('Y-m-d') }}">
                                             <label for="fecha_suceso">Fecha Suceso</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text fecha_suceso_error"></span>
@@ -88,7 +85,7 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Lugar del Suceso" name="lugar_suceso" id="lugar_suceso"
+                                    <textarea class="form-control" name="lugar_suceso" id="lugar_suceso"
                                         style="height: 100px"></textarea>
                                     <label for="lugar_suceso">Lugar del Succeso</label>
                                     {{-- alerta de error --}}
@@ -96,7 +93,7 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Adicionales" name="adicional" id="adicional" style="height: 100px"></textarea>
+                                    <textarea class="form-control" name="adicional" id="adicional" style="height: 100px"></textarea>
                                     <label for="adicional">Adicionales</label>
                                     {{-- alerta de error --}}
                                     <span class="text-danger error-text adicional_error"></span>
@@ -104,7 +101,7 @@
 
                                 <div class="form-floating mb-3">
                                     <input type="file" class="form-control" id="imagen" name="imagen"
-                                        accept=".jpg, .jpeg, .png" placeholder="imagen">
+                                        accept=".jpg, .jpeg, .png">
                                     <label for="imagen">Foto de la Persona</label>
                                     {{-- alerta de error --}}
                                     <span class="text-danger error-text imagen_error"></span>
@@ -122,8 +119,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="tez" name="tez"
-                                                placeholder="tez">
+                                            <input type="text" class="form-control" id="tez" name="tez">
                                             <label for="tez">Tez / Color</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text tez_error"></span>
@@ -131,8 +127,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="cabello" name="cabello"
-                                                placeholder="cabello">
+                                            <input type="text" class="form-control" id="cabello" name="cabello">
                                             <label for="cabello">Cabello</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text cabello_error"></span>
@@ -143,8 +138,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="ojos" name="ojos"
-                                                placeholder="ojos">
+                                            <input type="text" class="form-control" id="ojos" name="ojos">
                                             <label for="ojos">Color de Ojos</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text ojos_error"></span>
@@ -152,8 +146,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="nariz" name="nariz"
-                                                placeholder="nariz">
+                                            <input type="text" class="form-control" id="nariz" name="nariz">
                                             <label for="nariz">Nariz</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text nariz_error"></span>
@@ -164,8 +157,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="boca" name="boca"
-                                                placeholder="boca">
+                                            <input type="text" class="form-control" id="boca" name="boca">
                                             <label for="boca">Boca</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text boca_error"></span>
@@ -173,8 +165,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="contextura" name="contextura"
-                                                placeholder="contextura">
+                                            <input type="text" class="form-control" id="contextura" name="contextura">
                                             <label for="contextura">Contextura</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text contextura_error"></span>
@@ -184,7 +175,7 @@
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
                                             <input type="number" class="form-control" id="estatura" name="estatura"
-                                                placeholder="estatura" step="any">
+                                                step="any">
                                             <label for="estatura">Estatura (1.70)</label>
                                             {{-- alerta de error --}}
                                             <span class="text-danger error-text estatura_error"></span>
@@ -200,15 +191,14 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="vestimenta" name="vestimenta"
-                                        placeholder="vestimenta">
+                                    <input type="text" class="form-control" id="vestimenta" name="vestimenta">
                                     <label for="vestimenta">Vestimenta</label>
                                     {{-- alerta de error --}}
                                     <span class="text-danger error-text vestimenta_error"></span>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Ultima ves Vista" id="ultima_vista" name="ultima_vista"
+                                    <textarea class="form-control" id="ultima_vista" name="ultima_vista"
                                         style="height: 100px"></textarea>
                                     <label for="ultima_vista">Ultima ves Vista</label>
                                     {{-- alerta de error --}}
@@ -216,7 +206,7 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Observaciones" id="observaciones" name="observaciones"
+                                    <textarea class="form-control" id="observaciones" name="observaciones"
                                         style="height: 100px"></textarea>
                                     <label for="observaciones">Observaciones</label>
                                     {{-- alerta de error --}}

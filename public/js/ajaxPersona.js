@@ -1,7 +1,7 @@
 $(function () {
 
 
-    /*guardar datos ajax persona*/
+    /*guardar datos ajax persona
     $('#form-persona').on('submit', function (e) {
         e.preventDefault();
 
@@ -31,7 +31,7 @@ $(function () {
                 }
             }
         });
-    });
+    });*/
 
     //actializar datos aja persona
     $('#form-edit-persona').on('submit', function (e) {
