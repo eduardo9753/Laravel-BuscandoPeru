@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- CON ESTE COMANDO SE ARREGLO ERROR: 419 --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>BuscandoPerú</title>
 
     {{-- google fonst --}}
@@ -31,7 +34,7 @@
     <link rel="stylesheet" href="{{ asset('css/visitador/mapa.css') }}">
     <link rel="stylesheet" href="{{ asset('css/visitador/post.show.css') }}">
 
-    {{--lisk css responsive--}}
+    {{-- lisk css responsive --}}
     <link rel="stylesheet" href="{{ asset('css/responsive/visitador.home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive/visitador.home.show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive/nav-usuario.css') }}">
@@ -84,7 +87,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-   
+
     <script src="{{ asset('js/ajaxPersona.js') }}"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
