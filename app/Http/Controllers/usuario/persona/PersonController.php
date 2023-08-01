@@ -65,7 +65,7 @@ class PersonController extends Controller
         } else {
             //guardando persona
             if ($request->has('imagen')) {
-                $imagen = $request->file('imagen'); //NOMBRE DEL INPUT
+                $imagen = $request->file('imagen');
                 $nombreImagen = Str::uuid() . "." . $imagen->extension(); //DANDOLE UN ID UNICO A LA IMAGEN
 
                 $imagenServidor = Image::make($imagen);
