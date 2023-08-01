@@ -83,8 +83,8 @@ class PersonController extends Controller
                         'lugar_suceso' => $request->lugar_suceso,
                         'imagen' => $nombreImagen,
                         'adicional' => $request->adicional,
-                        'country_id' => $request->country_id,
                         'celular' => $request->celular,
+                        'country_id' => $request->country_id,
                         'state_id' => 1,
                         'user_id' => Auth::user()->id
                     ]);
