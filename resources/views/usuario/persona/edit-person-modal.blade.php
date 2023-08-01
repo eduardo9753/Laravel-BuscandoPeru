@@ -6,7 +6,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="form-edit-persona" action="{{ route('usuario.persona.update') }}" method="POST">
+                <form id="form-edit-persona" action="{{ route('usuario.persona.update') }}" method="POST"
+                enctype="multipart/form-data">
 
                     {{-- METODO ACTUALIZAR --}}
                     @method('PUT')
