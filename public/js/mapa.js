@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 $.each(data.result, function (prefix, val) {
                     var greenIcon = L.icon({
                         //iconUrl: 'http://127.0.0.1:8000/personas/' + val.imagen, //url ruta local
-                        iconUrl: 'https://srv973-files.hstgr.io/68bf3bf2ca9764c2/files/public_html/buscandoperu/public/personas/' + val.imagen, //url ruta local
+                        iconUrl: 'https://miagroperu.familc.com/uploads/ec75e757-7f9f-4486-baf9-551c4885fe64.jpg' , //url ruta local
                         shadowUrl: 'https://cdn-icons-png.flaticon.com/512/2642/2642502.png', //sombra 
 
                         iconSize: [45, 45], // tamaño de la imagen [ancho , alto]
