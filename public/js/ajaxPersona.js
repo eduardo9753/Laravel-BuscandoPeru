@@ -33,7 +33,7 @@ $(function () {
         });
     });
 
-    //actializar datos aja persona
+    /*actializar datos aja persona
     $('#form-edit-persona').on('submit', function (e) {
         e.preventDefault();
 
@@ -63,7 +63,7 @@ $(function () {
                 }
             }
         });
-    });
+    });*/
 
     //actualizar datos ajax caracteristicas
     $('#form-edit-caracteristicas').on('submit', function (e) {
