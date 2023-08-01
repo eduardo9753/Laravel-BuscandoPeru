@@ -15,7 +15,7 @@
     <section class="" id="persona">
         <div class="contenedor">
             <form action="{{ route('usuario.save') }}" id="form-persona" method="POST"
-                enctype="application/x-www-form-urlencoded">
+                enctype="application/x-www-form-urlencoded" novalidate>
 
                 {{-- token de seguridad --}}
                 @csrf
@@ -44,6 +44,17 @@
                                 </div>
 
                                 <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" max="20" id="celular"
+                                                name="celular" placeholder="celular">
+                                            <label for="celular">Celular de Contacto</label>
+                                            {{-- alerta de error --}}
+                                            <span class="text-danger error-text celular_error"></span>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="edad" name="edad"
@@ -53,6 +64,18 @@
                                             <span class="text-danger error-text edad_error"></span>
                                         </div>
                                     </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select name="country_id" id="country_id" class="form-select">
+                                                @foreach ($countries as $country)
+                                                    <option value="{{ $country->id }}">{{ $country->nombre }}</option>
+                                                @endforeach
+                                            </select>
+                                            <label for="edad">Pais</label>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="date" class="form-control" id="fecha_suceso" name="fecha_suceso"

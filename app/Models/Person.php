@@ -17,6 +17,7 @@ class Person extends Model
         'lugar_suceso',
         'imagen',
         'adicional',
+        'celular',
         'country_id',
         'state_id',
         'user_id'

@@ -23,13 +23,8 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="celular" value="{{ Auth::user()->celular }}">
-                        <label for="celular">Celular</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
                         <input type="password" class="form-control" id="floatingPassword">
-                        <label for="floatingPassword">Contraseña</label>
+                        <label for="floatingPassword">Nueva Contraseña</label>
                     </div>
                 </div>
                 <div class="col-md-6 text-center">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\usuario\persona;
 
 use App\Http\Controllers\Controller;
 use App\Models\Characteristic;
+use App\Models\Country;
 use App\Models\Particularity;
 use App\Models\Person;
 use Illuminate\Http\Request;
@@ -24,7 +25,10 @@ class PersonController extends Controller
     //vista para registrar una persona 
     public function index()
     {
-        return view('usuario.persona.index');
+        $countries = Country::all();
+        return view('usuario.persona.index', [
+            'countries' => $countries
+        ]);
     }
 
     public function save(Request $request)
@@ -33,6 +37,8 @@ class PersonController extends Controller
             'nombres' => 'required|string',
             'apellidos' => 'required|string',
             'edad' => 'required',
+            'country_id' => 'required',
+            'celular' => 'required|max:20',
             'fecha_suceso' => 'required',
             'lugar_suceso' => 'required|string',
             'imagen' => 'required',
@@ -77,7 +83,8 @@ class PersonController extends Controller
                         'lugar_suceso' => $request->lugar_suceso,
                         'imagen' => $nombreImagen,
                         'adicional' => $request->adicional,
-                        'country_id' => 1,
+                        'country_id' => $request->country_id,
+                        'celular' => $request->celular,
                         'state_id' => 1,
                         'user_id' => Auth::user()->id
                     ]);
@@ -130,6 +137,8 @@ class PersonController extends Controller
             'nombres' => 'required',
             'apellidos' => 'required',
             'edad' => 'required',
+            'celular' => 'required|max:20',
+            'country_id' => 'required',
             'fecha_suceso' => 'required',
             'lugar_suceso' => 'required',
             'adicional' => 'required',
@@ -174,6 +183,7 @@ class PersonController extends Controller
                 'imagen' => $nombreImagen,
                 'adicional' => $request->adicional,
                 'country_id' => 1,
+                'celular' => $request->celular,
                 'state_id' => 1,
                 'user_id' => Auth::user()->id
             ]);

@@ -24,18 +24,18 @@
                                 <input type="text" value="{{ $data->particularity_id }}" hidden
                                     name="particularidad_id">
                                 <input type="text" class="form-control" id="vestimenta" name="vestimenta"
-                                    value="{{ $data->vestimenta }}" placeholder="vestimenta">
+                                    value="{{ $data->vestimenta }}">
                                 <label for="vestimenta">Vestimenta</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Ultima ves Vista" id="ultima_vista" name="ultima_vista"
+                                <textarea class="form-control" id="ultima_vista" name="ultima_vista"
                                     style="height: 100px">{{ $data->ultima_vista }}</textarea>
                                 <label for="ultima_vista">Ultima ves Vista</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Observaciones" id="observaciones" name="observaciones"
+                                <textarea class="form-control" id="observaciones" name="observaciones"
                                     style="height: 100px">{{ $data->observaciones }}</textarea>
                                 <label for="observaciones">Observaciones</label>
                             </div>

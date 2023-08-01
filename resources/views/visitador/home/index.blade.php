@@ -38,7 +38,7 @@
             </div>
             @foreach ($people as $person)
                 <div class="home-visitador-flex"
-                    title="Si tiene alguna referencia llame al numero de whasap que pude visualizar en la publicacion o click en el mapa para dejar sus coordenadas donde usted se encuentra actualmente">
+                    title="Si tiene alguna referencia llame al número de whasap que pude visualizar en la publicacion o click en el mapa para dejar sus coordenadas donde usted se encuentra actualmente">
                     <div class="home-visitador-imagen">
                         <img src="{{ asset('personas') . '/' . $person->imagen }}" alt="">
                     </div>
@@ -67,19 +67,17 @@
 
                         <div class="botones">
                             <div>
-                                <a href="" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
+                                <a href="https://wa.me/51952955205?text=Quisiera" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
                                 <a href="{{ route('visitador.show', ['id' => $person->id]) }}" class="mapa"><i
                                         class='bx bx-map bx-burst'></i></a>
                             </div>
                             <div>
                                 <a href="{{ route('visitador.show', ['id' => $person->id]) }}">Saber más</a>
-                                <p>{{date('y-m-d h:i:s')}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-
 
         </div>
     </section>

@@ -41,11 +41,28 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" step="any" id="celular"
+                                            name="celular" value="{{ $data->celular }}">
+                                        <label for="celular">Celular de Contacto</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="edad" name="edad"
                                             value="{{ $data->edad }}" placeholder="edad">
                                         <label for="edad">Edad</label>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="pais" name="pais"
+                                            value="{{ $data->pais }}" placeholder="pais">
+                                        <label for="pais">Pais</label>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
                                         <input type="date" class="form-control" id="fecha_suceso" name="fecha_suceso"

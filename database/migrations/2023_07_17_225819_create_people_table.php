@@ -22,7 +22,7 @@ class CreatePeopleTable extends Migration
             $table->text('lugar_suceso');
             $table->string('imagen');
             $table->text('adicional')->nullable();
-
+            $table->string('celular','20')->unique();
             $table->foreignId('country_id')
                 ->nullable()
                 ->constrained('id')

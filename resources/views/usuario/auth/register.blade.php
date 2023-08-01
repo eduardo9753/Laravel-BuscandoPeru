@@ -15,13 +15,11 @@
                             {{-- token de seguridad --}}
                             @csrf
 
-
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="name">Nombre</label>
                                 <input type="text" id="name" name="name" class="form-control"
                                     value="{{ old('name') }}" />
-
                                 {{-- validacion con validate --}}
                                 @error('name')
                                     {{-- alerta de error --}}
@@ -31,24 +29,9 @@
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="celular">Celular</label>
-                                <input type="text" id="celular" name="celular" class="form-control"
-                                    value="{{ old('celular') }}" />
-
-                                {{-- validacion con validate --}}
-                                @error('celular')
-                                    {{-- alerta de error --}}
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example1">Email address</label>
                                 <input type="email" id="email" name="email" class="form-control"
                                     value="{{ old('email') }}" />
-
                                 {{-- validacion con validate --}}
                                 @error('email')
                                     {{-- alerta de error --}}
@@ -60,7 +43,6 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="password">Password</label>
                                 <input type="password" id="password" name="password" class="form-control" />
-
                                 {{-- validacion con validate --}}
                                 @error('password')
                                     {{-- alerta de error --}}
@@ -73,7 +55,6 @@
                                 <label class="form-label" for="password_confirmation">Password Confirmation</label>
                                 <input type="password" id="password_confirmation" name="password_confirmation"
                                     class="form-control" />
-
                                 {{-- validacion con validate --}}
                                 @error('password_confirmation')
                                     {{-- alerta de error --}}

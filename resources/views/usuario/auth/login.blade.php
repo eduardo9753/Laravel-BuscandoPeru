@@ -26,7 +26,6 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="email">Email address</label>
                                 <input type="email" name="email" id="email" class="form-control" />
-
                                 {{-- validacon con validate --}}
                                 @error('email')
                                     <p class="text-danger">{{ $message }}</p>
@@ -37,7 +36,6 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="password">Password</label>
                                 <input type="password" id="password" name="password" class="form-control" />
-
                                 {{-- validacon con validate --}}
                                 @error('password')
                                     <p class="text-danger">{{ $message }}</p>
@@ -51,7 +49,6 @@
                                     <div class="form-check">
                                         <label class="form-check-label" for="remember"> Remember me </label>
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" />
-
                                     </div>
                                 </div>
 
