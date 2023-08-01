@@ -183,8 +183,8 @@ class PersonController extends Controller
                 'imagen' => $nombreImagen,
                 'celular' => $request->celular,
                 'adicional' => $request->adicional,
-                'country_id' => 1,
-                'state_id' => 3,
+                'country_id' => $request->country_id,
+                'state_id' => 3, //1 es de manera local pero en el hosting es 3
                 'user_id' => Auth::user()->id
             ]);
 
