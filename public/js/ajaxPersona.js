@@ -1,7 +1,7 @@
 $(function () {
 
 
-    //guardar datos ajax persona
+    /*guardar datos ajax persona*/
     $('#form-persona').on('submit', function (e) {
         e.preventDefault();
 

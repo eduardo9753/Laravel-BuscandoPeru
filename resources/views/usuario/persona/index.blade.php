@@ -15,7 +15,7 @@
     <section class="" id="persona">
         <div class="contenedor">
             <form action="{{ route('usuario.save') }}" id="form-persona" method="POST"
-                enctype="application/x-www-form-urlencoded" novalidate>
+                enctype="multipart/form-data">
 
                 {{-- token de seguridad --}}
                 @csrf
@@ -47,7 +47,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" max="20" id="celular"
+                                            <input type="number" class="form-control" id="celular"
                                                 name="celular" placeholder="celular">
                                             <label for="celular">Celular de Contacto</label>
                                             {{-- alerta de error --}}
