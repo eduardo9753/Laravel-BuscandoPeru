@@ -2,7 +2,7 @@
 
 Plataforma orientada en la busqueda de personas desaparecidas en donde podrán realizar el seguimiento en un mapa en tiempo real.
 
-Construida en laravel 8, Tailwind CSS y Base de Datos MySql.
+Construida en laravel 8, bootstrap CSS 5 y Base de Datos MySql.
 
 - [Visita la Pagina - BuscandoPeru](https://buscandoperu.familc.com/).
 
