@@ -26,7 +26,7 @@
                     <p>{{ $person->edad }} año(s)</p>
                     <p>Fecha del suceso: {{ $person->fecha_suceso }}</p>
                     <p>Lugar del suceso: {{ $person->lugar_suceso }}</p>
-                    <p>Adicionales: {{ $person->adicionales }}</p>
+                    <p>Adicionales: {{ $person->adicional }}</p>
                     <p>Pais: {{ $person->pais }}</p>
                 </div>
 
