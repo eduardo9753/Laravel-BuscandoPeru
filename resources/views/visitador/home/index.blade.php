@@ -36,6 +36,7 @@
                     </div>
                 </form>
             </div>
+
             @foreach ($people as $person)
                 <div class="home-visitador-flex"
                     title="Si tiene alguna referencia llame al número de whasap que pude visualizar en la publicacion o click en el mapa para dejar sus coordenadas donde usted se encuentra actualmente">
@@ -52,12 +53,18 @@
                         </div>
 
                         <div class="caracteristica">
-                            <button>{{ $person->tez }}</button>
-                            <button>{{ $person->cabello }}</button>
-                            <button>{{ $person->ojos }}</button>
-                            <button>{{ $person->nariz }}</button>
-                            <button>{{ $person->boca }}</button>
-                            <button>{{ $person->contextura }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/tez.png') }}"
+                                    alt="">{{ $person->tez }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/cabello.png') }}"
+                                    alt="">{{ $person->cabello }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/ojos.png') }}"
+                                    alt="">{{ $person->ojos }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/nariz.png') }}"
+                                    alt="">{{ $person->nariz }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/boca.png') }}"
+                                    alt="">{{ $person->boca }}</button>
+                            <button><img src="{{ asset('img/caracteristicas/contextura.png') }}"
+                                    alt="">{{ $person->contextura }}</button>
                         </div>
 
                         <div class="particularidad">
@@ -67,12 +74,18 @@
 
                         <div class="botones">
                             <div>
-                                <a href="https://wa.me/{{ $person->codigo }}{{ $person->celular }}?text=Quisiera brindarle información" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
+                                <a href="https://wa.me/{{ $person->codigo }}{{ $person->celular }}?text=Quisiera brindarle información"
+                                    target="_blank" class="whatsapp"><i class='bx bxl-whatsapp bx-burst'></i></a>
                                 <a href="{{ route('visitador.show', ['id' => $person->id]) }}" class="mapa"><i
                                         class='bx bx-map bx-burst'></i></a>
                             </div>
+
                             <div>
-                                <a href="{{ route('visitador.show', ['id' => $person->id]) }}">Saber más</a>
+                                {!! QrCode::size(100)->color(255, 85, 0)->generate($person->id) !!}
+                            </div>
+
+                            <div class="">
+                                <a class="boton" href="{{ route('visitador.show', ['id' => $person->id]) }}">Saber más</a>
                             </div>
                         </div>
                     </div>

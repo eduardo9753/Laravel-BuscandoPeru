@@ -1,14 +1,14 @@
 #home-visitador .home-visitador-flex{
-   display: flex; margin-bottom: 25px;
+   display: flex; margin-bottom: 25px; align-items: center;
 }
 
 #home-visitador .form-buscador {padding-top: 100px; padding-bottom: 30px;}
 
 #home-visitador .home-visitador-flex .home-visitador-imagen img {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 50%;
     width: 330px;
     height: 330px;
+    margin-right: 10px;
 }
 
 #home-visitador .home-visitador-descripcion{ 
@@ -51,4 +51,10 @@
     padding: 10px;
     color: var(--blanco);
     border-radius: 25%;
+}
+
+#home-visitador .home-visitador-descripcion .botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

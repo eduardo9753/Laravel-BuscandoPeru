@@ -79,8 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
             if (data.code == 1) {
                 $.each(data.result, function (prefix, val) {
                     var greenIcon = L.icon({
-                        //iconUrl: 'http://127.0.0.1:8000/personas/' + val.imagen, //url ruta local
-                        iconUrl: 'https://buscandoperu.familc.com/personas/'+val.imagen , //url ruta local
+                        iconUrl: 'http://127.0.0.1:8000/personas/' + val.imagen, //url ruta local
+                        //iconUrl: 'https://buscandoperu.familc.com/personas/'+val.imagen , //url ruta produccion
                         shadowUrl: 'https://cdn-icons-png.flaticon.com/512/2642/2642502.png', //sombra 
 
                         iconSize: [45, 45], // tamaño de la imagen [ancho , alto]
